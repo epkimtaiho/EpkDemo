@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>866,3453</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>866,3870</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetStock_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -59,7 +59,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetStock" sap:VirtualizedContainerService.HintSize="846,3393" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetStock" sap:VirtualizedContainerService.HintSize="846,3810" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtStockList" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtStockTable" />
@@ -70,13 +70,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="804,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="804,3177" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[&quot;Data\output\stockReport_&quot; + in_InvestorName.ToString + &quot;.xlsx&quot;]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - 'stockReport_고객명.xlsx' 파일 처리" sap:VirtualizedContainerService.HintSize="804,3594" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[&quot;Data\output\stockReport_&quot; + in_InvestorName.ToString + &quot;.xlsx&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="770,3068" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="770,3485" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:Browser" Name="ieFinanceDaum" />
             </Sequence.Variables>
@@ -87,25 +87,25 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:ExcelReadRange AddHeaders="True" DataTable="[dtStockList]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="728,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="stockList" />
             <ui:ExcelReadRange AddHeaders="True" DataTable="[dtStockTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="728,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="stockTable" />
-            <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="728,2716" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[ieFinanceDaum]" Url="https://finance.daum.net/">
+            <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="728,3133" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[ieFinanceDaum]" Url="https://finance.daum.net/">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="694,2617" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="694,3034" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  Daum 금융'" sap:VirtualizedContainerService.HintSize="652,2525" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="dee637d3f8589e8119a13457ff7c3d60" Selector="&lt;html title='Daum 금융' /&gt;">
+                    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  Daum 금융'" sap:VirtualizedContainerService.HintSize="652,2942" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="dee637d3f8589e8119a13457ff7c3d60" Selector="&lt;html title='Daum 금융' /&gt;">
                       <ui:BrowserScope.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="618,2379" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="618,2796" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:Int32" Name="intRecordCnt" />
                               <Variable x:TypeArguments="x:String" Name="strRowNum" />
@@ -132,13 +132,13 @@
                                 <InArgument x:TypeArguments="x:String">[(intRecordCnt + 2).ToString]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtStockList]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576,1860" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtStockList]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576,2277" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="rowStock" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,1713" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,2130" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="var검색결과" />
                                       <Variable x:TypeArguments="ui:GenericValue" Name="strStockName" />
@@ -189,7 +189,19 @@
                                         </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
-                                    <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayMS="1000" DisplayName="Type Into - 주식종목명 입력 + enter" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[strStockName.ToString + &quot;[k(enter)]&quot;]">
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,231" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="273,153" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="231,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[strStockName]" />
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
+                                    <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="1000" DisplayName="Type Into - 주식종목명 입력 + enter" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[strStockName]">
                                       <ui:TypeInto.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5ddf11ad4397d07f1bbcbe67771e077c" Selector="&lt;webctrl id='inpSearchStock' tag='INPUT' /&gt;">
                                           <ui:Target.TimeoutMS>
@@ -201,6 +213,28 @@
                                         </ui:Target>
                                       </ui:TypeInto.Target>
                                     </ui:TypeInto>
+                                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  btnSearchStock'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a8236a8332e3abbce0a9c7184f13cfb7" Selector="&lt;webctrl id='btnSearchStock' tag='BUTTON' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
                                     <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[var검색결과]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                                       <ui:UiElementExists.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="85b24720fcb3bf033fd5ed5290899d61" Selector="&lt;html title='검색 | 다음 금융' /&gt;&lt;webctrl tag='H4' aaname='&amp;apos;*&amp;apos; 검색 결과' /&gt;" TimeoutMS="2000">
@@ -210,7 +244,7 @@
                                         </ui:Target>
                                       </ui:UiElementExists.Target>
                                     </ui:UiElementExists>
-                                    <If Condition="[var검색결과]" sap:VirtualizedContainerService.HintSize="484,253" sap2010:WorkflowViewState.IdRef="If_1">
+                                    <If Condition="[var검색결과]" DisplayName="If - 검색결과 페이지가 있는 경우" sap:VirtualizedContainerService.HintSize="484,253" sap2010:WorkflowViewState.IdRef="If_1">
                                       <If.Then>
                                         <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://finance.daum...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                                           <ui:Click.CursorPosition>
@@ -260,14 +294,14 @@
                                       </Assign.Value>
                                     </Assign>
                                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[dtStockList.Rows.IndexOf(rowStock).ToString + &quot;) strStockName : &quot; + strStockName.ToString + &quot; | resStockPrice : &quot; + resStockPrice.ToString + &quot; (&quot; + intStockPrice.ToString + &quot;)&quot;]" />
-                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Custom\ExcelIndexToColumn.xaml">
+                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File - 컬럼idx &gt; 컬럼명" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Custom\ExcelIndexToColumn.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:Int32" x:Key="in_index">[dtStockList.Rows.IndexOf(rowStock) + 2]</InArgument>
                                         <OutArgument x:TypeArguments="x:String" x:Key="out_columnName">[strColumnName]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;* strColumnName : &quot; + strColumnName.ToString + &quot; | strRowNum : &quot; + strRowNum.ToString + &quot; &gt;&gt; &quot; + strColumnName + strRowNum.ToString]" />
-                                    <ui:ExcelWriteCell Cell="[strColumnName.ToString + strRowNum.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="stockTable" Text="[intStockPrice.ToString]" />
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot; - strColumnName : &quot; + strColumnName.ToString + &quot; | strRowNum : &quot; + strRowNum.ToString + &quot; &gt;&gt; &quot; + strColumnName + strRowNum.ToString]" />
+                                    <ui:ExcelWriteCell Cell="[strColumnName.ToString + strRowNum.ToString]" DisplayName="Write Cell - 주식종목별 가격 등록" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="stockTable" Text="[intStockPrice.ToString(“N0”)]" />
                                   </Sequence>
                                 </ActivityAction>
                               </ui:ForEachRow.Body>
@@ -277,7 +311,7 @@
                                 <OutArgument x:TypeArguments="x:String">[str입력시간]</OutArgument>
                               </Assign.To>
                               <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString(“yyyy-MM-dd hh:mm:ss”)]</InArgument>
+                                <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString(“yyyy-MM-dd”)]</InArgument>
                               </Assign.Value>
                             </Assign>
                             <ui:ExcelWriteCell Cell="[&quot;A&quot; + strRowNum.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="576,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="stockTable" Text="[str입력시간]" />
@@ -289,11 +323,11 @@
                 </ActivityAction>
               </ui:OpenBrowser.Body>
             </ui:OpenBrowser>
-            <ui:CloseTab Browser="[ieFinanceDaum]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="728,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+            <ui:CloseTab Browser="[ieFinanceDaum]" DisplayName="Close Tab - ie 종료" sap:VirtualizedContainerService.HintSize="728,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
           </Sequence>
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="804,22" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="EXCEL" />
+    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process - 엑셀 종료" sap:VirtualizedContainerService.HintSize="804,22" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="EXCEL" />
   </Sequence>
 </Activity>
