@@ -85,8 +85,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtStockList]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="728,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="stockList" />
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtStockTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="728,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="stockTable" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtStockList]" DisplayName="Read Range - stockList 워크시트 조회" sap:VirtualizedContainerService.HintSize="728,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="stockList" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dtStockTable]" DisplayName="Read Range - stockTable 워크시트 조회" sap:VirtualizedContainerService.HintSize="728,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="stockTable" />
             <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="728,3133" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[ieFinanceDaum]" Url="https://finance.daum.net/">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
@@ -142,7 +142,7 @@
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="var검색결과" />
                                       <Variable x:TypeArguments="ui:GenericValue" Name="strStockName" />
-                                      <Variable x:TypeArguments="x:Int32" Name="intStockPrice" />
+                                      <Variable x:TypeArguments="x:Int32" Default="0" Name="intStockPrice" />
                                       <Variable x:TypeArguments="x:String" Name="resStockPrice" />
                                       <Variable x:TypeArguments="x:String" Name="strColumnName" />
                                     </Sequence.Variables>
