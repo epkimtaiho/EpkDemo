@@ -3,6 +3,12 @@
   "description": "EpkDemo",
   "main": "Main.xaml",
   "dependencies": {
+    "CsvHelper": "[12.2.1]",
+    "DocumentFormat.OpenXml": "[2.10.0-beta0002]",
+    "Microsoft.Exchange.WebServices": "[2.2.0]",
+    "Tobesoft.MiPlatform.Activities": "[1.0.2]",
+    "Tobesoft.XPlatform.Activities": "[1.1.79]",
+    "Tobesoft.XPlatformLib": "[1.0.3]",
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Excel.Activities": "[2.7.2]",
     "UiPath.Mail.Activities": "[1.7.2]",
@@ -30,7 +36,8 @@
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
-    }
+    },
+    "fileInfos": []
   },
   "expressionLanguage": "VisualBasic"
 }
