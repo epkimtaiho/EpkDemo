@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SaleLotte" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="626,2132" sap2010:WorkflowViewState.IdRef="SaleLotte_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SaleLotte" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="626,2476" sap2010:WorkflowViewState.IdRef="SaleLotte_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
       <x:String>System.Activities</x:String>
@@ -45,7 +45,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SaleLotte" sap:VirtualizedContainerService.HintSize="606,2072" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SaleLotte" sap:VirtualizedContainerService.HintSize="606,2416" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="BrowserLotte" />
     </Sequence.Variables>
@@ -54,25 +54,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="564,1980" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[BrowserLotte]" Url="http://kor.lottedfs.com/kr/display/hotSale">
+    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="564,2324" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[BrowserLotte]" Url="http://kor.lottedfs.com/kr/display/hotSale">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="530,1881" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="530,2225" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  롯데인터넷면세점'" sap:VirtualizedContainerService.HintSize="488,1789" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="386ad93128874d5f37bdcfd92de32493" Selector="&lt;html title='롯데인터넷면세점' /&gt;">
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  롯데인터넷면세점'" sap:VirtualizedContainerService.HintSize="488,2133" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="386ad93128874d5f37bdcfd92de32493" Selector="&lt;html title='롯데인터넷면세점' /&gt;">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,1643" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,1987" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="UI_SaleList" />
                       <Variable x:TypeArguments="x:Int32" Name="SaleIdx" />
@@ -97,13 +97,13 @@
                         </ui:Target>
                       </ui:FindChildren.Target>
                     </ui:FindChildren>
-                    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[SaleIdx]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,1244" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[UI_SaleList]">
+                    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[SaleIdx]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412,1246" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[UI_SaleList]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1111" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1112" sap2010:WorkflowViewState.IdRef="Sequence_2">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="ui:GenericValue" Name="IdxSale" />
                               <Variable x:TypeArguments="ui:GenericValue" Name="resBrand" />
@@ -185,20 +185,37 @@
                                 </ui:Target>
                               </ui:GetAttribute.Target>
                             </ui:GetAttribute>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[resBrand.ToString + &quot; || &quot; + resProduct.ToString + &quot; || &quot; + resDiscount.ToString + &quot; || &quot; + resPrdNo.ToString]" />
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[resBrand.ToString + &quot; || &quot; + resProduct.ToString + &quot; || &quot; + resDiscount.ToString + &quot; || &quot; + resPrdNo.ToString]" />
                             <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="s:String[]">[ArrSalePrd]</OutArgument>
                               </Assign.To>
                               <Assign.Value>
-                                <InArgument x:TypeArguments="s:String[]">[(resBrand.ToString, resProduct.ToString, resDiscount.ToString, resPrdNo.ToString)]</InArgument>
+                                <InArgument x:TypeArguments="s:String[]">[{resBrand.ToString, resProduct.ToString, resDiscount.ToString, resPrdNo.ToString}]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:AddDataRow ArrayRow="{x:Null}" DataRow="{x:Null}" DataTable="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[ArrSalePrd]" DataTable="[DT_SalePrd]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                           </Sequence>
                         </ActivityAction>
                       </ui:ForEach.Body>
                     </ui:ForEach>
+                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DT_SalePrd]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="412,302" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="274,154" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="232,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[row(&quot;product&quot;).ToString]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
                   </Sequence>
                 </ActivityAction>
               </ui:BrowserScope.Body>
